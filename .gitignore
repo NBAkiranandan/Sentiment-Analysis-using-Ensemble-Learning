@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+*.joblib
+*.parquet
+
+# Node / Vite
+node_modules/
+dist/
+.ds_store
+
+# Logs
+*.log
+
+# Cache & IDE
+.pytest_cache/
+.vscode/
+.idea/
+
+# Large Datasets (>100MB exceeds GitHub limits)
+backend/data/raw/*
+!backend/data/raw/.gitkeep

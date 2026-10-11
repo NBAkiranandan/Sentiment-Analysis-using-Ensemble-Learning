@@ -1,0 +1,173 @@
+{
+    "dataset_stats": {
+        "dataset_name": "Sentiment140",
+        "records_raw": 1600000,
+        "total_samples": 100000,
+        "positive_samples": 50000,
+        "negative_samples": 50000,
+        "train_size": 80000,
+        "test_size": 20000,
+        "is_sampled": true,
+        "sample_size": 100000,
+        "sample_size_used": 100000,
+        "training_mode": "Development Sample (100,000 tweets)",
+        "dataset_source": "sentiment140.csv"
+    },
+    "parameters": {
+        "tfidf_max_features": 25000,
+        "tfidf_ngram_range": [
+            1,
+            2
+        ],
+        "test_size": 0.2,
+        "random_state": 42,
+        "logistic_max_iter": 1000,
+        "rf_n_estimators": 100,
+        "adaboost_n_estimators": 100
+    },
+    "models": [
+        "Logistic Regression",
+        "Random Forest",
+        "AdaBoost"
+    ],
+    "logistic_regression": {
+        "model_name": "Logistic Regression",
+        "accuracy": 0.7827,
+        "precision": 0.776,
+        "recall": 0.7949,
+        "f1_score": 0.7854,
+        "confusion_matrix": [
+            [
+                7706,
+                2294
+            ],
+            [
+                2051,
+                7949
+            ]
+        ],
+        "training_time": 0.4779,
+        "prediction_time": 0.0041,
+        "classification_report": {
+            "0": {
+                "precision": 0.7897919442451573,
+                "recall": 0.7706,
+                "f1-score": 0.7800779470567394,
+                "support": 10000.0
+            },
+            "1": {
+                "precision": 0.7760421751440008,
+                "recall": 0.7949,
+                "f1-score": 0.7853579014968137,
+                "support": 10000.0
+            },
+            "accuracy": 0.78275,
+            "macro avg": {
+                "precision": 0.782917059694579,
+                "recall": 0.7827500000000001,
+                "f1-score": 0.7827179242767766,
+                "support": 20000.0
+            },
+            "weighted avg": {
+                "precision": 0.782917059694579,
+                "recall": 0.78275,
+                "f1-score": 0.7827179242767766,
+                "support": 20000.0
+            }
+        }
+    },
+    "random_forest": {
+        "model_name": "Random Forest",
+        "accuracy": 0.7322,
+        "precision": 0.7065,
+        "recall": 0.7944,
+        "f1_score": 0.7479,
+        "confusion_matrix": [
+            [
+                6700,
+                3300
+            ],
+            [
+                2056,
+                7944
+            ]
+        ],
+        "training_time": 4.1435,
+        "prediction_time": 0.236,
+        "classification_report": {
+            "0": {
+                "precision": 0.7651895842850617,
+                "recall": 0.67,
+                "f1-score": 0.7144380464917893,
+                "support": 10000.0
+            },
+            "1": {
+                "precision": 0.7065101387406617,
+                "recall": 0.7944,
+                "f1-score": 0.7478817548484278,
+                "support": 10000.0
+            },
+            "accuracy": 0.7322,
+            "macro avg": {
+                "precision": 0.7358498615128617,
+                "recall": 0.7322,
+                "f1-score": 0.7311599006701086,
+                "support": 20000.0
+            },
+            "weighted avg": {
+                "precision": 0.7358498615128618,
+                "recall": 0.7322,
+                "f1-score": 0.7311599006701085,
+                "support": 20000.0
+            }
+        }
+    },
+    "adaboost": {
+        "model_name": "AdaBoost",
+        "accuracy": 0.6434,
+        "precision": 0.5989,
+        "recall": 0.8681,
+        "f1_score": 0.7088,
+        "confusion_matrix": [
+            [
+                4187,
+                5813
+            ],
+            [
+                1319,
+                8681
+            ]
+        ],
+        "training_time": 25.6438,
+        "prediction_time": 0.5704,
+        "classification_report": {
+            "0": {
+                "precision": 0.7604431529240828,
+                "recall": 0.4187,
+                "f1-score": 0.54004901328518,
+                "support": 10000.0
+            },
+            "1": {
+                "precision": 0.5989374913757417,
+                "recall": 0.8681,
+                "f1-score": 0.7088266514248387,
+                "support": 10000.0
+            },
+            "accuracy": 0.6434,
+            "macro avg": {
+                "precision": 0.6796903221499122,
+                "recall": 0.6434,
+                "f1-score": 0.6244378323550093,
+                "support": 20000.0
+            },
+            "weighted avg": {
+                "precision": 0.6796903221499122,
+                "recall": 0.6434,
+                "f1-score": 0.6244378323550093,
+                "support": 20000.0
+            }
+        }
+    },
+    "selected_model": "Logistic Regression",
+    "primary_metric": "f1_score"
+}
